@@ -1,0 +1,89 @@
+body {
+    background-color: pink;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .heart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px; 
+  }
+  
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+  
+  .heart::before,
+  .heart::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+  }
+  
+  .heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+
+  button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ff4d4d; 
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+  }
+  
+
+  #response {
+    margin-top: 20px;
+  }
+  
+  #responseText {
+    font-size: 24px; 
+    color: red; 
+    font-weight: bold; 
+    text-transform: uppercase;
+  }
+  
+  .centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 200px; 
+    margin-top: 20px; 
+  }
